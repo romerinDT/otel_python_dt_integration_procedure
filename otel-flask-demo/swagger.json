@@ -1,0 +1,28 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Gestor de Datos API",
+        "description": "Una simple API para gestionar datos en memoria"
+    },
+    "paths": {
+        "/data": {
+            "get": {
+                "summary": "Obtener todos los datos",
+                "responses": {
+                    "200": {
+                        "description": "Lista de datos"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Agregar un dato",
+                "responses": {
+                    "201": {
+                        "description": "Dato agregado"
+                    }
+                }
+            }
+        }
+    }
+}
