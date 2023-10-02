@@ -8,6 +8,10 @@ Integración python opentelemetry con instrumentación automática sobre AKS
 	kubectl get services gestor-de-datos-service
 
 #### Para ver las trazas y métricas en los logs del pod:
-   - Encuentra el nombre del pod: ```kubectl get pods -l app=gestor-de-datos```
-   - Ve los logs: ```kubectl logs [NOMBRE_DEL_POD]```
+   - Encuentra el nombre del pod:
+
+	kubectl get pods -l app=gestor-de-datos
+   - Ve los logs:
+
+	kubectl logs [NOMBRE_DEL_POD]
    
