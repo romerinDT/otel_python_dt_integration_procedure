@@ -1,8 +1,9 @@
-# Construcción de la Aplicación<br>
+# Construcción de la Aplicación
+
 ## Construye la imagen Docker:
-   - `docker login`<br>
-   - `docker build -t demopython:latest .`<br>
-<br>
+   - Navega al directorio donde se encuentran los archivos de la aplicación
+   - Construir imagen: `docker build -t demopython:latest .`
 
 ## Sube la imagen a un registro
-   - `docker push demopython:latest`
+   - Login al repositorio de docker hub: `docker login`
+   - Subir imagen al docker hub: `docker push demopython:latest`
