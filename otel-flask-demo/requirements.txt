@@ -1,5 +1,5 @@
-Flask==1.1.2
-Jinja2==2.11.3
-flask_swagger_ui==3.36.0
+Flask
+Jinja2
+flask_swagger_ui
 opentelemetry-distro
 opentelemetry-exporter-otlp-proto-grpc
