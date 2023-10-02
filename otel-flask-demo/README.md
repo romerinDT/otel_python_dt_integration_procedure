@@ -7,3 +7,4 @@
 ## Sube la imagen a un registro
    - Login al repositorio de docker hub: `docker login`
    - Subir imagen al docker hub: `docker push demopython:latest`
+   - (Opcional) levantar en local: `docker run -p 8080:8080 demopython:latest`
