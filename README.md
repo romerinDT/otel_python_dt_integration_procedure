@@ -1,6 +1,9 @@
 # Despliegue Open Telementry python dynatrace demo
 Integración python opentelemetry con instrumentación automática sobre AKS
 
+#### Crear y subir la imagen a docker hub :
+Para este punto seguir las intrucciones 
+
 #### Aplica la configuración de Kubernetes:
 	kubectl apply -f deployment-aks.yaml
 
@@ -15,3 +18,7 @@ Integración python opentelemetry con instrumentación automática sobre AKS
 
 	kubectl logs [NOMBRE_DEL_POD]
    
+#### Generar trafico para prueba:
+   - Ejecutar el archivo python :
+
+	kubectl get pods -l app=gestor-de-datos
