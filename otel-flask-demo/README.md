@@ -2,12 +2,18 @@
 
 ## Construye la imagen Docker:
    - Navega al directorio donde se encuentran los archivos de la aplicación
-   - Reemplaza el campo [URL] por la url del tenant hasta el .com Ejemplo: `https://XXXXX.live.com/`
-   - Reemplaza el campo [TOKEN] por el token generado en dynatrace con lo siguientes permisos:
-      - Ingest logs
-      - Ingest metrics
-      - Ingest OpenTelemetry traces
-   - Construir imagen: `docker build -t demopython:latest .`
+   - Define la variable en entorno DT_URL con la url del tenant hasta el .com Ejemplo: `https://XXXXX.live.com`
+      - linux: `export DT_URL=https://XXXXX.live.com`
+      - windows: `set DT_URL=https://XXXXX.live.com`
+   - Define la variable en entorno DT_TOKEN con el token generado en dynatrace
+      - permisos:
+         - Ingest logs
+         - Ingest metrics
+         - Ingest OpenTelemetry traces
+      - ejemplo:
+         - linux: `export DT_TOKEN=dt.XXXX.XXXX`
+         - windows: `set DT_TOKEN=dt.XXXX.XXXX`
+   - Construir imagen: `docker build --build-arg DT_URL=${DT_URL} --build-arg DT_TOKEN=${DT_TOKEN} -t demopython:latest .`
 
 ## Sube la imagen a un registro
    - Login al repositorio de docker hub: `docker login`
