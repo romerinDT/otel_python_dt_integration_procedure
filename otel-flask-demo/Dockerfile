@@ -8,7 +8,7 @@ RUN opentelemetry-bootstrap --action=install
 
 COPY . .
 
-ENV OTEL_EXPORTER_OTLP_ENDPOINT=https://gnj89010.dev.dynatracelabs.com
+ENV OTEL_EXPORTER_OTLP_ENDPOINT=[URL]
 ENV OTEL_EXPORTER_OTLP_HEADERS=Authorization=Api-Token%20[TOKEN]
 ENV OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
 ENV OTEL_SERVICE_NAME="demopyotel"
