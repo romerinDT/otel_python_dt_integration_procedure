@@ -19,6 +19,6 @@ Para este punto seguir las intrucciones
 	kubectl logs [NOMBRE_DEL_POD]
    
 #### Generar trafico para prueba:
-   - Ejecutar el archivo python :
+   - Ejecutar el archivo python trafic_generator.py:
 
-	kubectl get pods -l app=gestor-de-datos
+	python trafic_generator.py
