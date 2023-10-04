@@ -4,3 +4,4 @@ flask_swagger_ui
 opentelemetry-instrumentation
 opentelemetry-distro
 opentelemetry-exporter-otlp-proto-grpc
+opentelemetry-instrumentation-flask
