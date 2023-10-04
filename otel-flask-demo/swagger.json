@@ -17,6 +17,23 @@
             },
             "post": {
                 "summary": "Agregar un dato",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "El dato que se quiere agregar",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "item": {
+                                    "type": "string",
+                                    "description": "El dato a agregar"
+                                }
+                            }
+                        }
+                    }
+                ],
                 "responses": {
                     "201": {
                         "description": "Dato agregado"
