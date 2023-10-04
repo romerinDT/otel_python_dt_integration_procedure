@@ -16,5 +16,5 @@ ENV OTEL_EXPORTER_OTLP_HEADERS=Authorization=Api-Token%20${DT_TOKEN}
 ENV OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
 ENV OTEL_SERVICE_NAME="demopyotel"
 
-//CMD ["opentelemetry-instrument", "python", "app.py"]
+#CMD ["opentelemetry-instrument", "python", "app.py"]
 CMD ["opentelemetry-instrument", "--traces_exporter", "console","--metrics_exporter", "console", "python", "app.py"]
