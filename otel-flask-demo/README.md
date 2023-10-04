@@ -2,9 +2,9 @@
 
 ## Construye la imagen Docker:
    - Navega al directorio donde se encuentran los archivos de la aplicación
-   - Define la variable en entorno DT_URL con la url del tenant hasta el .com Ejemplo: `https://XXXXX.live.com/api/v2/otlp`
-      - linux: `export DT_URL=https://XXXXX.live.com/api/v2/otlp`
-      - windows: `set DT_URL=https://XXXXX.live.com/api/v2/otlp`
+   - Define la variable en entorno DT_URL con la url del tenant hasta el .com Ejemplo: `https://XXXXX.live.com`
+      - linux: `export DT_URL=https://XXXXX.live.com`
+      - windows: `set DT_URL=https://XXXXX.live.com`
    - Define la variable en entorno DT_TOKEN con el token generado en dynatrace
       - permisos:
          - Ingest logs
