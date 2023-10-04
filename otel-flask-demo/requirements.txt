@@ -1,6 +1,6 @@
 Flask
 Jinja2
 flask_swagger_ui
+opentelemetry-instrumentation
 opentelemetry-distro
-opentelemetry-instrumentation-flask
-opentelemetry-exporter-otlp
+opentelemetry-exporter-otlp-proto-grpc
