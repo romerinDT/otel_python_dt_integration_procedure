@@ -1,8 +1,24 @@
 from flask import Flask, request, jsonify
-
 from flask_swagger_ui import get_swaggerui_blueprint
 
+from opentelemetry.instrumentation.flask import FlaskInstrumentor
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import (
+    BatchSpanProcessor,
+    ConsoleSpanExporter,
+)
+from opentelemetry.trace import get_tracer_provider, set_tracer_provider
+
+set_tracer_provider(TracerProvider())
+get_tracer_provider().add_span_processor(
+    BatchSpanProcessor(ConsoleSpanExporter())
+)
+
+instrumentor = FlaskInstrumentor()
+
 app = Flask(__name__)
+
+instrumentor.instrument_app(app)
 
 # Datos en memoria
 DATA = []
@@ -37,4 +53,4 @@ def swagger_json():
     return json_content, 200, {'Content-Type': 'application/json'}
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8080)
+    app.run(debug=True, host='0.0.0.0', port=8080, use_reloader=False)
